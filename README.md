@@ -120,7 +120,8 @@ npm install
 npm run dev
 
 
-### 1️⃣ Backend (Flask with Python)
+## ▶️ How to Run the Project
+### 2️⃣ Backend (Flask with Python)
 2.  Start a Flask project:
 ```bash
 cd backend
@@ -131,5 +132,6 @@ pip install Flask Flask-WTF Flask-Login Flask-SQLAlchemy Flask-Migrate  Pillow f
 flask --app core db init
 flask --app core db migrate -m "Initial migration"
 flask --app core db upgrade
+
 
 
