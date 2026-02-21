@@ -87,30 +87,6 @@ Relationships:
 
 ---
 
-## 🗄️ Database Schema (Simplified)
-
-### Book
-- id (Primary Key)  
-- title  
-- author  
-- available (Boolean)  
-
-### Borrower
-- id (Primary Key)  
-- name  
-- phone  
-- email  
-
-### Borrow
-- id (Primary Key)  
-- borrower_id (Foreign Key)  
-- book_id (Foreign Key)  
-- borrow_date  
-- return_date  
-- returned (Boolean)  
-
----
-
 ## 🧠 What I Learned
 
 - Building a full-stack application with Flask and React  
@@ -139,3 +115,4 @@ Relationships:
 ```bash
 git clone https://github.com/your-username/library-management-system.git
 cd library-management-system
+
