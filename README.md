@@ -109,7 +109,6 @@ Relationships:
 
 ---
 
-## ▶️ How to Run the Project
 
 ### 1️⃣ Frontend (React with Vite)
 1. Start a React project:
@@ -118,7 +117,6 @@ cd frontend
 cd my-app
 npm install
 npm run dev
----
 
 
 ### 2️⃣ Backend (Flask with Python)
@@ -132,6 +130,7 @@ pip install Flask Flask-WTF Flask-Login Flask-SQLAlchemy Flask-Migrate  Pillow f
 flask --app core db init
 flask --app core db migrate -m "Initial migration"
 flask --app core db upgrade
+
 
 
 
