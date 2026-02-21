@@ -1,79 +1,141 @@
-📚 Library Management System
-📖 Overview
+# 📚 Library Management System
 
-The Library Management System is a software application designed to help a library owner manage books and borrowing operations efficiently.
+## 📖 Overview
 
-The system replaces manual record-keeping with a digital solution, making the management process faster, more accurate, and more organized.
+The Library Management System is a full-stack web application designed to help a library owner manage books and borrowing operations efficiently.
 
-It allows the library owner to:
+The system replaces manual record-keeping with a digital solution, making library management faster, more accurate, and well organized.
 
-Register new books
+It allows the library owner to register books, manage borrower information, and track book lending and return dates while ensuring that books cannot be borrowed if they are already unavailable.
 
-Manage borrower information
+---
 
-Track book borrowing and return dates
+## 🚀 Features
 
-Monitor book availability
+### 📚 Book Management
+- Add new books to the system
+- Store book details (title, author, etc.)
+- Track book availability status
 
-🚀 Features
-📚 Book Management
+### 👤 Borrower Management
+- Register new borrowers
+- Store personal information (name, contact details)
 
-Add new books to the system
+### 🔄 Borrowing System
+- Assign a book to a registered borrower
+- Record borrow date
+- Record return deadline
+- Automatically mark books as unavailable when borrowed
 
-Store book details (title, author, etc.)
+### ✅ Return Process
+- Mark books as returned
+- Automatically update book availability
 
-Track availability status
+---
 
-👤 Borrower Management
+## 🏗️ System Architecture
 
-Register new borrowers
+This project follows a **full-stack architecture**:
 
-Store personal information (name, phone, email)
+- **Frontend:** React  
+- **Backend:** Flask (Python)  
+- **Database:** SQLite  
 
-🔄 Borrowing System
-
-Assign a book to a registered borrower
-
-Record borrow date
-
-Record return deadline
-
-Prevent borrowing of unavailable books
-
-✅ Return Process
-
-Mark books as returned
-
-Automatically update book availability
-
-🏗️ System Structure
+### 🔗 Entity Relationships
 
 The system is based on three main entities:
 
-Book – Stores book information
+- **Book**
+- **Borrower**
+- **Borrow (Transaction)**
 
-Borrower – Stores user information
+Relationships:
+- One borrower can borrow multiple books.
+- One book can only be borrowed by one person at a time.
+- Each borrowing action is stored as a transaction.
 
-Borrow – Stores borrowing transactions
+---
 
-Relationship:
+## 🛠️ Technologies Used
 
-One borrower can borrow multiple books
+- **Frontend:** React  
+- **Backend:** Flask (Python)  
+- **Database:** SQLite  
+- **API Testing:** Postman  
+- **Version Control:** Git & GitHub  
 
-One book can only be borrowed by one person at a time
+---
 
-🛠️ Technologies Used
+## 📡 API Endpoints
 
-Frontend: React
+### 📚 Books
+- `GET /books` → Get all books  
+- `POST /books` → Add a new book  
+- `PUT /books/<id>` → Update book information  
+- `DELETE /books/<id>` → Delete a book  
 
-Backend: Flask (Python)
+### 👤 Borrowers
+- `GET /borrowers` → Get all borrowers  
+- `POST /borrowers` → Register a new borrower  
+- `PUT /borrowers/<id>` → Update borrower information  
+- `DELETE /borrowers/<id>` → Delete a borrower  
 
-Database: SQLite
+### 🔄 Borrow Transactions
+- `GET /borrows` → Get all borrowing records  
+- `POST /borrows` → Borrow a book  
+- `PUT /borrows/<id>/return` → Mark book as returned  
 
-API Testing: Postman
+---
 
-Version Control: Git & GitHub
+## 🗄️ Database Schema (Simplified)
 
-REST API
+### Book
+- id (Primary Key)  
+- title  
+- author  
+- available (Boolean)  
 
-Postman for API testing
+### Borrower
+- id (Primary Key)  
+- name  
+- phone  
+- email  
+
+### Borrow
+- id (Primary Key)  
+- borrower_id (Foreign Key)  
+- book_id (Foreign Key)  
+- borrow_date  
+- return_date  
+- returned (Boolean)  
+
+---
+
+## 🧠 What I Learned
+
+- Building a full-stack application with Flask and React  
+- Designing and connecting relational database models  
+- Creating and consuming REST APIs  
+- Managing state in React  
+- Implementing business logic (book availability control)  
+- Connecting frontend and backend with HTTP requests  
+
+---
+
+## 🔮 Future Improvements
+
+- Add authentication (Admin login system)  
+- Add search and filtering functionality  
+- Add pagination for large book lists  
+- Add email notifications for due dates  
+- Improve UI/UX design  
+- Deploy the project online  
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/library-management-system.git
+cd library-management-system
