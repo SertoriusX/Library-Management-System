@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Book Database Form</title>
+</head>
+<body class="bg-light">
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4 w-100" style="max-width: 600px;">
+    <h2 class="text-center mb-4">📚 Add New Book</h2>
+    <form>
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Book Title</label>
+        <input type="text" class="form-control" id="title" required>
+      </div>
+
+      <!-- Author -->
+      <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input type="text" class="form-control" id="author" required>
+      </div>
+
+      <!-- Gender (Genre) -->
+      <div class="mb-3">
+        <label for="gender" class="form-label">Genre</label>
+        <select class="form-select" id="gender" required>
+          <option selected disabled>Choose genre</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Dystopian">Dystopian</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Biography">Biography</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Published Year -->
+      <div class="mb-3">
+        <label for="year" class="form-label">Published Year</label>
+        <select class="form-select" id="year" required>
+          <option selected disabled>Choose year</option>
+          <!-- Example: last 50 years -->
+          <option>2025</option>
+          <option>2024</option>
+          <option>2023</option>
+          <option>2022</option>
+          <option>2021</option>
+          <option>2020</option>
+          <option>2019</option>
+          <option>2018</option>
+          <option>2017</option>
+          <option>2016</option>
+          <option>2015</option>
+          <option>2010</option>
+          <option>2005</option>
+          <option>2000</option>
+          <option>1995</option>
+          <option>1990</option>
+          <option>1980</option>
+        </select>
+      </div>
+
+      <!-- Pages -->
+      <div class="mb-3">
+        <label for="pages" class="form-label">Pages</label>
+        <input type="number" class="form-control" id="pages" required>
+      </div>
+
+      <!-- Image Upload -->
+      <div class="mb-3">
+        <label for="bookImage" class="form-label">Book Cover</label>
+        <input class="form-control" type="file" id="bookImage" accept="image/*">
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary w-100">Save Book</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

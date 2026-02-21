@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="container-fluid border border-primary">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 col-lg-2 card p-1">
+      <ul class="list-group">
+        <li class="list-group-item">An item</li>
+
+        <!-- Books with collapse -->
+        <li class="list-group-item">
+          <a class="d-flex justify-content-between align-items-center text-decoration-none" 
+             data-bs-toggle="collapse" href="#booksMenu" role="button" aria-expanded="false" aria-controls="booksMenu">
+            Books
+            <span class="ms-2">&#9662;</span>
+          </a>
+          <ul class="list-group collapse mt-2" id="booksMenu">
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Create Book</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Show Books</a></li>
+          </ul>
+        </li>
+
+        <!-- Person with collapse -->
+        <li class="list-group-item">
+          <a class="d-flex justify-content-between align-items-center text-decoration-none" 
+             data-bs-toggle="collapse" href="#personsMenu" role="button" aria-expanded="false" aria-controls="personsMenu">
+            Person
+            <span class="ms-2">&#9662;</span>
+          </a>
+          <ul class="list-group collapse mt-2" id="personsMenu">
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Create Person</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Show Person</a></li>
+          </ul>
+        </li>
+
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-12 col-md-9 col-lg-10 d-flex justify-content-center align-items-center p-4">
+      <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+        <h1 class="text-center mb-4">Login</h1>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername">
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>
