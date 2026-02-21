@@ -111,8 +111,25 @@ Relationships:
 
 ## ▶️ How to Run the Project
 
-### 1️⃣ Clone the repository
+### 1️⃣ Frontend (React with Vite)
+1. Start a React project:
 ```bash
-git clone https://github.com/your-username/library-management-system.git
-cd library-management-system
+cd frontend
+cd my-app
+npm install
+npm run dev
+
+
+### 1️⃣ Backend (Flask with Python)
+2.  Start a Flask project:
+```bash
+cd backend
+cd flask_app
+python -m venv venv
+venv\Scripts\activate
+pip install Flask Flask-WTF Flask-Login Flask-SQLAlchemy Flask-Migrate  Pillow flask-cors flask_bcrypt  flask_jwt_extended 
+flask --app core db init
+flask --app core db migrate -m "Initial migration"
+flask --app core db upgrade
+
 
